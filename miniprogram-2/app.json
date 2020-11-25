@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/transit/transit",
+    "pages/metro/metro",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "附近公交",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#F5B223",
+    "color": "#9A9A9A",
+    "list": [
+      {
+        "pagePath": "pages/transit/transit",
+        "text": "附近公交",
+        "iconPath": "images/gj1.png",
+        "selectedIconPath": "images/gj2.png"
+      },
+      {
+        "pagePath": "pages/metro/metro",
+        "text": "地铁查询",
+        "iconPath": "images/dt1.png",
+        "selectedIconPath": "images/dt2.png"
+      }
+    ]
+  },
+  "plugins": {
+    "subway": {
+      "version": "1.0.9",
+      "provider": "wx6aaf93c4435fa1c1"
+    },
+    "routePlan": {
+      "version": "1.0.10",
+      "provider": "wx50b5593e81dd937a"
+      }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}
