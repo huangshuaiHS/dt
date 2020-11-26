@@ -1,0 +1,49 @@
+
+<!--地图容器-->
+<map
+id="myMap"
+style="width: 100%; height: 450px;"
+longitude="{{longitude}}" latitude="{{latitude}}"
+scale='16'
+polyline="{{polyline}}"
+show-location
+>
+</map>
+<form bindsubmit="formSubmit">
+    <!--输入起点和目的地经纬度坐标，格式为string格式-->
+    <!--起点输入框,同终点，不填默认当前位置-->
+    <label>起点坐标：<input style="border:1px solid #000;" name="start" value="{{start}}" bindfocus="start"></input></label>
+    <!--终点输入框,例：39.984060,116.307520-->
+    <label>终点坐标：<input style="border:1px solid #000;" name="dest" value="{{dest}}" bindfocus="dest"></input></label> 
+    <!--提交表单数据-->
+    <button form-type="submit">路线规划</button>
+</form>
+
+<button bindtap="selection">导航路线</button>
+<!-- 三级嵌套循环 -->
+<view wx:if="{{list != null}}">路线方案：{{list.length}}</view>
+<view class='history' wx:for="{{list}}" wx:key="{{index}}">
+  <!-- 历史列表 -->
+  <view class='recommend-list'>
+    <view class='news-card' wx:for="{{item.steps}}" wx:for-item="cell" wx:key="index"
+      wx:if="{{cell.mode == 'TRANSIT'}}">
+      <view class='news-info'>
+        <!-- 嵌套循环 第二个循环自定义一个cell -->
+        <view class='detail'>
+          <text class='subdetail' wx:for="{{cell.lines}}" wx:for-item="subcell" wx:key="index">
+            {{subcell.vehicle == 'SUBWAY'?'地铁':'公交'}} {{subcell.title}} 价格：{{subcell.price}}
+            途径站数：{{subcell.station_count}} 估算时间：{{subcell.duration}}分钟
+            开始时间：{{subcell.end_time}} 结束时间：{{subcell.start_time}} 距离：{{subcell.distance}}
+            开往目的地：{{subcell.destination.title}} 
+            上车：{{subcell.geton.title}}  下车：{{subcell.getoff.title}} 
+            中途车站：<text user-select class='subdetail' wx:for="{{subcell.stations}}" wx:for-item="stations" wx:key="index">
+              {{stations.title+" "}}
+            </text>
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>-----------------------------------</view>
+</view>
+

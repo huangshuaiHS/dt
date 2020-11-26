@@ -335,7 +335,7 @@ Page({
       },
       complete: function (res) {
         console.log(res)
-        //_this.gj(res)
+        _this.gj(res)
       }
     })
   },

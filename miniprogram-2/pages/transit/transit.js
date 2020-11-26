@@ -1,4 +1,3 @@
-
 // 引入SDK核心类
 var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
 
@@ -9,6 +8,98 @@ var qqmapsdk = new QQMapWX({
 
 
 Page({
+
+  
+  onLoad: function () {
+    var _this = this,
+      searchName = '大石坝';
+    qqmapsdk = new QQMapWX({
+      key: '6WMBZ-LQULS-5DBOS-6DRZO-XXT22-XLFBR'
+    });
+    qqmapsdk.geocoder({
+      address: '重庆市' + searchName,
+      success: function (res) {
+        console.log('suc', res);
+        // res.result.location 为地点的经纬度
+        var point = res.result.location;
+        var marker = {
+          iconPath: '/img/location.png',
+          id: 0,
+          latitude: point.lat,
+          longitude: point.lng,
+          title: searchName,
+          width: 30,
+          height: 30,
+          callout: {
+            content: searchName,
+            color: '#333',
+            fontSize: 14,
+            padding: 8,
+            display: 'ALWAYS',
+            textAlign: 'center'
+          }
+        }
+        _this.setData({
+          point: point,
+          markers: [marker],
+          locMarker: marker
+        })
+      },
+      fail: function (res) {
+        console.log('fail', res);
+      },
+      complete: function (res) {
+        console.log('complete', res);
+      }
+    })
+  },
+  getAround(keyword) {
+    var _this = this,
+      location = _this.data.point.lat + ',' + _this.data.point.lng;
+    // 搜索周边方法
+    qqmapsdk.search({
+      keyword: keyword,
+      location: location,
+      success: function (res) {
+        console.log(res);
+        var markers = [],
+          num = 1;
+        markers.push(_this.data.locMarker);
+        for (var o of res.data) {
+          markers.push({
+            iconPath: '/img/location.png',
+            id: num++,
+            latitude: o.location.lat,
+            longitude: o.location.lng,
+            title: o.title,
+            width: 30,
+            height: 30,
+            callout: {
+              content: o.title,
+              color: '#333',
+              fontSize: 14,
+              padding: 8,
+              display: 'BYCLICK',
+              textAlign: 'center'
+            }
+          })
+        }
+      },
+      fail: function () {}
+    })
+  },
+  getKeyword:(e)=>{
+    var index = e.currentTarget.dataset.index;
+    this.setData({
+        currentInd: index
+    })
+    this.getAround(this.data.aroundType[index].text);
+},
+
+
+
+
+
 
   formSubmit(e) {
     var _this = this;
@@ -69,12 +160,12 @@ Page({
       },
       complete: function (res) {
         _this.setData({
-          list:res.result.routes
+          list: res.result.routes
         })
         for (var i = 0; i < res.result.routes.length; i++) {
 
           for (var j = 0; j < res.result.routes[i].steps.length; j++) {
-            if(res.result.routes[i].steps[j].mode == "TRANSIT"){
+            if (res.result.routes[i].steps[j].mode == "TRANSIT") {
               console.log(res.result.routes[i].steps[j].lines);
 
             }

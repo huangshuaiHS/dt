@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/transit/transit",
+    "pages/nearby/nearby",
     "pages/metro/metro",
+    "pages/transit/transit",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -18,7 +19,7 @@
     "color": "#9A9A9A",
     "list": [
       {
-        "pagePath": "pages/transit/transit",
+        "pagePath": "pages/nearby/nearby",
         "text": "附近公交",
         "iconPath": "images/gj1.png",
         "selectedIconPath": "images/gj2.png"
@@ -35,10 +36,14 @@
     "subway": {
       "version": "1.0.9",
       "provider": "wx6aaf93c4435fa1c1"
-    },
+      },
     "routePlan": {
       "version": "1.0.10",
       "provider": "wx50b5593e81dd937a"
+      },
+    "chooseLocation": {
+      "version": "1.0.5",
+      "provider": "wx76a9a06e5b4e693e"
       }
   },
   "permission": {

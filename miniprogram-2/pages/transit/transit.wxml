@@ -42,3 +42,18 @@
   </view>
   <view>-----------------------------------</view>
 </view>
+
+
+<map
+  id="map"
+  longitude="{{point.lng}}"
+  latitude="{{point.lat}}"
+  scale="15"
+  markers="{{markers}}"
+></map>
+ 
+<view class="catalog">
+  <block wx:for="{{aroundType}}" wx:key="">
+    <view bindtap="getType" data-index="{{index}}" class="item {{currentInd==index?'active':''}}">{{item.text}}</view>
+  </block>
+</view>
