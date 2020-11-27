@@ -1,0 +1,41 @@
+/* 回到中心 */
+.hui{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+}
+/* 指针 */
+.zhen{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 30px;
+  height: 30px;
+}
+/* 每一项 */
+.item{
+  height: 40px;
+  border-bottom: 1px solid #CCC
+}
+/* 每一项下面的iview */
+.item view{
+  font-size: 14px;
+  color: #CCC;
+}
+/* 地图 */
+map{
+  width: 100%;
+  height: 300px;
+}
+/* 输入框 */
+.input{
+  border: 1px solid #CCC;
+  border-radius: 5%;
+  font-size: 16px;
+  width: 98%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}

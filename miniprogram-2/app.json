@@ -1,5 +1,8 @@
 {
   "pages":[
+    "pages/map/map",
+    "pages/mapzb/mapzb",
+    
     "pages/nearby/nearby",
     "pages/metro/metro",
     "pages/transit/transit",
@@ -9,7 +12,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "附近公交",
+    "navigationBarTitleText": "附近便捷",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
@@ -19,16 +22,16 @@
     "color": "#9A9A9A",
     "list": [
       {
-        "pagePath": "pages/nearby/nearby",
-        "text": "附近公交",
-        "iconPath": "images/gj1.png",
-        "selectedIconPath": "images/gj2.png"
+        "pagePath": "pages/map/map",
+        "text": "附近便捷",
+        "iconPath": "images/便捷_方便.png",
+        "selectedIconPath": "images/便捷_方便 (1).png"
       },
       {
         "pagePath": "pages/metro/metro",
         "text": "地铁查询",
-        "iconPath": "images/dt1.png",
-        "selectedIconPath": "images/dt2.png"
+        "iconPath": "images/地铁 (2).png",
+        "selectedIconPath": "images/地铁 (3).png"
       }
     ]
   },
