@@ -86,12 +86,37 @@
   text-overflow: ellipsis;
 }
 
+.tptp{
+  position: absolute;
+  left: 0;
+  bottom: 160rpx;
+  padding: 20rpx 25rpx;
+  width:50rpx;
+}
+.lulu{
+  position: absolute;
+  left: 0;
+  bottom: 160rpx;
+  padding: 20rpx 25rpx;
+  width:80rpx;
+  margin-left: 43%;
+}
+
+.dtdt{
+  position: absolute;
+  left: 0;
+  bottom: 160rpx;
+  padding: 20rpx 25rpx;
+  width:50rpx;
+  margin-left: 85%;
+}
+
 /* 页面内容 */
 
 .xmwzB{
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -10px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.6);
   box-sizing: border-box;

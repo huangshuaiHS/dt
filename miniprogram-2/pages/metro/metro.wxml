@@ -1,2 +1,4 @@
 <button bindtap="metro">地铁查询</button>
+<button bindtap="navigation">导航查询</button>
+
 
