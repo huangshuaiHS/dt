@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 {
   "usingComponents": {},
   "navigationBarTitleText": "",
   "navigationStyle": "custom"
 
+=======
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "附近便捷"
+>>>>>>> b409394dc3739ee69529a524d27dcdcfc19188b1
 }

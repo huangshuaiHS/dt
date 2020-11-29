@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <button bindtap="metro">地铁查询</button>
 <button bindtap="navigation">导航查询</button>
 
 
+=======
+<button bindtap="metro">地铁查询</button>
+<button bindtap="navigation">导航查询</button>
+
+
+>>>>>>> b409394dc3739ee69529a524d27dcdcfc19188b1

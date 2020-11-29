@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- bindcontroltap="bindControlTap" -->
 
 <map id="map" 
@@ -40,3 +41,48 @@ bindtap="bindtap"
 </map>
 
 
+=======
+<!-- bindcontroltap="bindControlTap" -->
+
+<map id="map" 
+subkey="6WMBZ-LQULS-5DBOS-6DRZO-XXT22-XLFBR"
+layer-style="2"
+bindregionchange="bindRegionChange" 
+bindcallouttap="callouttap"
+longitude="{{longitude}}"
+latitude="{{latitude}}" 
+markers="{{markers}}" 
+style="width:{{mapw}};height:{{maph}}" 
+scale="{{scale}}" 
+show-location="true"
+show-compass="true"
+enable-traffic="true"
+enable-building="true"
+enable-overlooking="true"
+bindtap="bindtap"
+>
+
+<cover-view class="tptp">
+  <cover-image bindtap="controltap" src="../../images/dh1.png"></cover-image>
+</cover-view>
+
+<cover-view class="lulu">
+  <cover-image bindtap="navigation" src="../../images/dh2.png"></cover-image>
+</cover-view>
+
+<cover-view class="dtdt">
+  <cover-image bindtap="metro" src="../../images/dtdt2.png"></cover-image>
+</cover-view>
+
+<!-- tab点击切换不同内容 -->
+<cover-view class="xmwzB flex tfAlignC flexSb">
+		<cover-view class="xmwzBLi {{index==xmwzB_index?'on':''}}" data-index='{{index}}' catchtap="xmwzB_click" wx:for='{{tabs}}' wx:key='index'>
+      <cover-image class="img" src="{{index!=xmwzB_index?item.ico:item.ico_active}}"></cover-image>
+      {{item.name}}
+    </cover-view>
+  </cover-view>
+
+</map>
+
+
+>>>>>>> b409394dc3739ee69529a524d27dcdcfc19188b1

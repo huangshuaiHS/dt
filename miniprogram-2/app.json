@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "pages":[
     "pages/map/map",
@@ -55,3 +56,62 @@
     }
   }
 }
+=======
+{
+  "pages":[
+    "pages/map/map",
+    "pages/mapzb/mapzb",
+    
+    "pages/nearby/nearby",
+    "pages/metro/metro",
+    "pages/transit/transit",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "附近便捷",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#F5B223",
+    "color": "#9A9A9A",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "附近便捷",
+        "iconPath": "images/fb2.png",
+        "selectedIconPath": "images/fb1.png"
+      },
+      {
+        "pagePath": "pages/metro/metro",
+        "text": "地铁查询",
+        "iconPath": "images/dtdt1.png",
+        "selectedIconPath": "images/dtdt2.png"
+      }
+    ]
+  },
+  "plugins": {
+    "subway": {
+      "version": "1.0.9",
+      "provider": "wx6aaf93c4435fa1c1"
+      },
+    "routePlan": {
+      "version": "1.0.10",
+      "provider": "wx50b5593e81dd937a"
+      },
+    "chooseLocation": {
+      "version": "1.0.5",
+      "provider": "wx76a9a06e5b4e693e"
+      }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置的效果展示"
+    }
+  }
+}
+>>>>>>> b409394dc3739ee69529a524d27dcdcfc19188b1
