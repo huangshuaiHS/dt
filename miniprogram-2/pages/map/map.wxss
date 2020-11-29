@@ -86,6 +86,31 @@
   text-overflow: ellipsis;
 }
 
+.tptp{
+  position: absolute;
+  left: 0;
+  bottom: 180rpx;
+  padding: 20rpx 25rpx;
+  width:60rpx;
+}
+.lulu{
+  position: absolute;
+  left: 0;
+  bottom: 180rpx;
+  padding: 20rpx 25rpx;
+  width:100rpx;
+  margin-left: 40%;
+}
+
+.dtdt{
+  position: absolute;
+  left: 0;
+  bottom: 180rpx;
+  padding: 20rpx 25rpx;
+  width:60rpx;
+  margin-left: 85%;
+}
+
 /* 页面内容 */
 
 .xmwzB{
